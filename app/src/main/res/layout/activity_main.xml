@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_toast_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    tools:context="com.example.android.kindergartenquiz.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_main_paddingBottom"
+        android:paddingEnd="@dimen/activity_main_paddingRight"
+        android:paddingLeft="@dimen/activity_main_paddingLeft"
+        android:paddingRight="@dimen/activity_main_paddingRight"
+        android:paddingStart="@dimen/activity_main_paddingLeft"
+        android:paddingTop="@dimen/activity_main_paddingTop">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Title"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/subtitle"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/shapes3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shapesfinal1"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's play and learn!"
+            android:textAllCaps="true"
+            android:textColor="#3F51B5"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/name_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/Name"
+            android:inputType="textCapWords"/>
+
+        <TextView
+            android:id="@+id/three_dimensional_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Is this shape two dimensional or three dimensional?"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cube2_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/activity_main_paddingTop"
+            android:src="@drawable/cube2" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <RadioButton
+                android:id="@+id/two_dimensional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Two dimesional"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/three_dimensional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Three dimesional"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/shape_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:text="What shape is this?"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/activity_main_paddingTop"
+            android:src="@drawable/spheresmall" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <RadioButton
+                android:id="@+id/sphere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sphere"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/cube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cube"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/all_spheres_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="Select all the spheres."
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/sphere3_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/all_spheres_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sphere3" />
+
+            <CheckBox
+                android:id="@+id/sphere3_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/sphere3_view"
+                android:layout_below="@id/sphere3_view" />
+
+            <ImageView
+                android:id="@+id/cone9_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/all_spheres_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/sphere3_view"
+                android:src="@drawable/cone9" />
+
+            <CheckBox
+                android:id="@+id/cone9_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/cone9_view"
+                android:layout_alignRight="@id/cone9_view"
+                android:layout_below="@id/cone9_view" />
+
+            <ImageView
+                android:id="@+id/sphere6_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/all_spheres_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/cone9_view"
+                android:src="@drawable/sphere6" />
+
+            <CheckBox
+                android:id="@+id/sphere6_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/sphere6_view"
+                android:layout_below="@id/sphere6_view" />
+
+            <TextView
+                android:id="@+id/shape_cone_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sphere3_box"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="Which items are shape like a cone?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/cone11_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shape_cone_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/cone11" />
+
+            <CheckBox
+                android:id="@+id/cone11_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/cone11_view"
+                android:layout_below="@id/cone11_view" />
+
+            <ImageView
+                android:id="@+id/pelota_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shape_cone_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/cone11_view"
+                android:src="@drawable/pelota" />
+
+            <CheckBox
+                android:id="@+id/pelota_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/pelota_view"
+                android:layout_alignRight="@id/pelota_view"
+                android:layout_below="@id/pelota_view" />
+
+            <ImageView
+                android:id="@+id/conenaranja_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shape_cone_question"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/pelota_view"
+                android:src="@drawable/conenaranja" />
+
+            <CheckBox
+                android:id="@+id/conenaranja_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/conenaranja_view"
+                android:layout_below="@id/conenaranja_view" />
+
+
+            <TextView
+                android:id="@+id/cube_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cone11_box"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="Which Shape is a cube?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/sphere10_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cube_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/sphere10" />
+
+            <RadioButton
+                android:id="@+id/sphere10_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/sphere10_view"
+                android:layout_below="@id/sphere10_view" />
+
+            <ImageView
+                android:id="@+id/cone10_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cube_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/sphere10_view"
+                android:src="@drawable/cone10" />
+
+            <RadioButton
+                android:id="@+id/cone10_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/cone10_view"
+                android:layout_alignRight="@id/cone10_view"
+                android:layout_below="@id/cone10_view" />
+
+            <ImageView
+                android:id="@+id/cube10_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cube_question"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/cone10_view"
+                android:src="@drawable/cube10" />
+
+            <RadioButton
+                android:id="@+id/cube10_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/cube10_view"
+                android:layout_below="@id/cube10_view" />
+
+            <TextView
+                android:id="@+id/circle_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sphere10_radio"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:text="Can you trace a circle with this shape?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/cube4_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/circle_question"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/cube4" />
+
+                <FrameLayout
+                    android:id="@+id/framelayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_below="@id/cube4_view"
+                    android:layout_centerInParent="true">
+
+                        <RadioButton
+                            android:id="@+id/Yes_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="48dp"
+                            android:layout_gravity="start"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/No_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="48dp"
+                            android:layout_gravity="end"
+                            android:text="No" />
+
+                </FrameLayout>
+
+            <TextView
+                android:id="@+id/cylinder_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@id/framelayout1"
+                android:text="What shape is this?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/cylinder1_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cylinder_question"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/cylinder1" />
+
+            <EditText
+                android:id="@+id/cylinder_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cylinder1_view"
+                android:layout_marginBottom="16dp"
+                android:hint="Fill name"
+                android:inputType="textCapWords" />
+
+            <TextView
+                android:id="@+id/cube5_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorPrimary"
+                android:layout_below="@id/cylinder_text_input"
+                android:text="What shape is this?"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/cube5_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cube5_question"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/cube5" />
+
+            <EditText
+                android:id="@+id/cube_text_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cube5_view"
+                android:layout_marginBottom="16dp"
+                android:hint="Fill name"
+                android:inputType="textCapWords" />
+
+            <FrameLayout
+                android:id="@+id/framelayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_below="@id/cube_text_input"
+                android:layout_centerInParent="true">
+
+                <Button
+                    android:id="@+id/submit_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:layout_gravity="start"
+                    android:layout_below="@id/framelayout2"
+                    android:layout_marginTop="16dp"
+                    android:hint="submit"
+                    android:onClick="displayResults"
+                    android:text="Submit" />
+
+
+                <Button
+                    android:id="@+id/reset_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="48dp"
+                    android:layout_gravity="end"
+                    android:layout_below="@id/framelayout2"
+                    android:layout_marginTop="16dp"
+                    android:text="Reset" />
+
+
+            </FrameLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

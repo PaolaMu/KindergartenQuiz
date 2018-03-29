@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kindergarten Quiz</string>
+    <string name="Title">Kindergarten Math</string>
+    <string name="subtitle">Three dimensional shapes</string>
+    <string name="todo">TODO</string>
+    <string name="Name">name</string>
+    <string name="nameInput">nameInput</string>
+</resources>
