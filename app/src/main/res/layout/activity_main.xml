@@ -427,12 +427,13 @@
                 android:src="@drawable/cylinder1" />
 
             <EditText
-                android:id="@+id/cylinder_text_input"
+                android:id="@+id/cylinder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cylinder1_view"
                 android:layout_marginBottom="16dp"
                 android:hint="Fill name"
+                android:onClick="submitAnswers"
                 android:inputType="textCapWords" />
 
             <TextView
@@ -441,7 +442,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@color/colorPrimary"
-                android:layout_below="@id/cylinder_text_input"
+                android:layout_below="@id/cylinder"
                 android:text="What shape is this?"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         question4b = findViewById(R.id.conenaranja_box);
         question5 = findViewById(R.id.cube10_radio);
         question6 = findViewById(R.id.No_id);
-        question7 = findViewById(R.id.cylinder_text_input);
+        question7 = findViewById(R.id.cylinder);
         question8 = findViewById(R.id.cube_text_input);
         submitAnswers = findViewById(R.id.submit_id);
         reset = findViewById(R.id.reset_id);
@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (question3a.isChecked() && question3b.isChecked()) {
-            if (question4Score == 0) {
-                question4Score++;
+            if (question3Score == 0) {
+                question3Score++;
             }
 
         }
