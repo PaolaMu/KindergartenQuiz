@@ -1,37 +1,44 @@
 package com.example.android.kindergartenquiz;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
+
+
 public class MainActivity extends AppCompatActivity {
-    int score = 0;
-    int totalScore;
-    EditText nameInput;
-    RadioGroup question1;
-    RadioGroup question2;
-    CheckBox question3;
-    CheckBox question4;
-    RadioGroup question5;
-    Button question6;
+    //Initialized
+    int totalScore = 0;
+    int question1Score = 0;
+    int question2Score = 0;
+    int question3Score = 0;
+    int question4Score = 0;
+    int question5Score = 0;
+    int question6Score = 0;
+    int question7Score = 0;
+    int question8Score = 0;
+    RadioButton question1;
+    RadioButton question2;
+    CheckBox question3a;
+    CheckBox question3b;
+    CheckBox question4a;
+    CheckBox question4b;
+    RadioButton question5;
+    RadioButton question6;
     EditText question7;
     EditText question8;
-    Button submitAnswers;
+    EditText nameInput;
     Button reset;
-    Toast resultDisplay;
+    Button submitAnswers;
+    Editable userName;
+
 
 
     @Override
@@ -40,143 +47,128 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    private void findView() {
-        nameInput = (EditText) (findViewById(R.id.name_text_input));
-        question1 = (RadioGroup) (findViewById(R.id.three_dimensional_question));
-        question2 = (RadioGroup) (findViewById(R.id.shape_question));
-        question3 = (CheckBox) (findViewById(R.id.all_spheres_question));
-        question4 = (CheckBox) (findViewById(R.id.shape_cone_question));
-        question5 = (RadioGroup) (findViewById(R.id.cube_question));
-        question6 = (Button) (findViewById(R.id.circle_question));
-        question7 = (EditText) (findViewById(R.id.cylinder_question));
-        question8 = (EditText) (findViewById(R.id.cube5_question));
-        submitAnswers = (Button) (findViewById(R.id.submit_id));
-        reset = (Button) (findViewById(R.id.reset_id));
-
-    }
-
     /**
-     * This method is called when the submit button is clicked.
+     * This method is called when the user click the Submit button.
      */
-    public void displayResults(View view) {
-        String message = "You got " + totalScore + " out of 8!.";
-        Context context = getApplicationContext();
-        int duration = Toast.LENGTH_LONG;
-        Toast toast = Toast.makeText(context, message, duration);
-        toast.show();
+    public void submitAnswers(View view) {
+        question1 = findViewById(R.id.three_dimensional);
+        question2 = findViewById(R.id.sphere);
+        question3a = findViewById(R.id.sphere3_box);
+        question3b = findViewById(R.id.sphere6_box);
+        question4a = findViewById(R.id.cone11_box);
+        question4b = findViewById(R.id.conenaranja_box);
+        question5 = findViewById(R.id.cube10_radio);
+        question6 = findViewById(R.id.No_id);
+        question7 = findViewById(R.id.cylinder_text_input);
+        question8 = findViewById(R.id.cube_text_input);
+        submitAnswers = findViewById(R.id.submit_id);
+        reset = findViewById(R.id.reset_id);
+        nameInput = findViewById(R.id.name_text_input);
+
+        /*
+         * Checks if answer are correct and gives one point per correct answer
+         */
+
+        if (question1.isChecked()) {
+            if (question1Score == 0) {
+                question1Score++;
+
+            }
+        }
+
+        if (question2.isChecked()) {
+            if (question2Score == 0) {
+                question2Score++;
+            }
+        }
+
+        if (question3a.isChecked() && question3b.isChecked()) {
+            if (question4Score == 0) {
+                question4Score++;
+            }
+
+        }
+
+        if (question4a.isChecked() && question4b.isChecked()) {
+            if (question4Score == 0) {
+                question4Score++;
+            }
+
+        }
+        if (question5.isChecked()) {
+            if (question5Score == 0) {
+                question5Score++;
+            }
+        }
+        if (question6.isChecked()) {
+            if (question6Score == 0) {
+                question6Score++;
+            }
+        }
+        if (question7.getText().toString().trim().equals("Cylinder")) {
+            if (question7Score == 0) {
+                question7Score++;
+            }
+        }
+        if (question8.getText().toString().trim().equals("Cube")) {
+            if (question8Score == 0) {
+                question8Score++;
+            }
+        }
+    }
+        public void submitOnClick(View view) {
+            // get user name
+            nameInput = (findViewById(R.id.name_text_input));
+            userName = nameInput.getText();
+
+            // Calculate the score
+            totalScore = question1Score + question2Score + question3Score + question4Score +
+                    question5Score + question6Score + question7Score + question8Score;
+
+            //This next step calls the score interpretation process seen in "scoreToastMessage"
+            scoreToastMessage(totalScore);
+        }
+// At this point, the program retrieves the message associated with the score, and presents it on the screen as a toast.
+    public void scoreToastMessage(int totalScore) {
+        if (totalScore == 8) {
+            String scoreMessage8 = userName + " You scored " + totalScore + " out of 8! " + "Amazing job!";
+            Toast.makeText(this, scoreMessage8, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 7) {
+            String scoreMessage7 = userName + " You scored " + totalScore + " out of 8! " + "Great job!";
+            Toast.makeText(this, scoreMessage7, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 6) {
+            String scoreMessage6 = userName + " You scored " + totalScore + " out of 8! " + "Good job!";
+            Toast.makeText(this, scoreMessage6, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 5) {
+            String scoreMessage5 = userName + " You scored " + totalScore + " out of 8! " + "Pretty good!";
+            Toast.makeText(this, scoreMessage5, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 4) {
+            String scoreMessage4 = userName + " You scored " + totalScore + " out of 8! " + "You can do better!";
+            Toast.makeText(this, scoreMessage4, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 3) {
+            String scoreMessage3 = userName + " You scored " + totalScore + " out of 8! " + "Keep studying!";
+            Toast.makeText(this, scoreMessage3, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 2) {
+            String scoreMessage2 = userName + " You scored " + totalScore + " out of 8! " + "Tray again!";
+            Toast.makeText(this, scoreMessage2, Toast.LENGTH_LONG).show();
+        } else if (totalScore == 1) {
+            String scoreMessage1 = userName + " You scored " + totalScore + " out of 8! " + "You need practice!";
+            Toast.makeText(this, scoreMessage1, Toast.LENGTH_LONG).show();
+        } else {
+            String scoreMessage0 = userName + " You scored " + totalScore + " out of 8! " + "Review your Three dimensional shapes theme!";
+            Toast.makeText(this, scoreMessage0, Toast.LENGTH_LONG).show();
+        }
     }
 
-    public int totalScore(View view) {
+//This method is called when the user click the RESET button.
 
-        //get name
-        String applicantName = nameInput.getText().toString();
+    public void reset(View view) {
 
-        // If user check answer1 three_dimensional in question1 add a point
+        // This code will restart the quiz/activity
+        Intent resetActivity = getIntent();
+        finish();
+        startActivity(resetActivity);}
 
-        // Is the button now checked?
-        boolean answer1 = ((RadioButton) view).isChecked();
 
-        // Check which answer was clicked
-        switch (view.getId()) {
-            case R.id.three_dimensional:
-                if (answer1)
-                    score = score + 1;
-                // three dimensional
-                break;
-            case R.id.two_dimensional:
-                if (answer1)
-                    // two dimensional
-                    break;
-        }
+ }
 
-        // If user check answer2 sphere in question2 add a point
-        // Is the button now checked?
-        boolean answer2 = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.sphere:
-                if (answer2)
-                    totalScore = score + 1;
-                // sphere
-                break;
-            case R.id.cube:
-                if (answer2)
-                    // cube
-                    break;
-        }
-        // If user checks sphere3_box and sphere6_box on question3 add a point
-        boolean isChecked_1 = ((CheckBox) findViewById(R.id.sphere3_box)).isChecked();
-        boolean isChecked_2 = ((CheckBox) findViewById(R.id.sphere6_box)).isChecked();
-        boolean isChecked_3 = ((CheckBox) findViewById(R.id.cone9_box)).isChecked();
-        if (isChecked_1 && isChecked_2) {
-            totalScore = score + 1;
-        }
-
-        // If user checks cone11_box and conenaraja_box on question 4 add a point
-        boolean isChecked_4 = ((CheckBox) findViewById(R.id.cone11_box)).isChecked();
-        boolean isChecked_5 = ((CheckBox) findViewById(R.id.pelota_box)).isChecked();
-        boolean isChecked_6 = ((CheckBox) findViewById(R.id.conenaranja_box)).isChecked();
-        if (isChecked_4 && isChecked_6) {
-            totalScore = score + 1;
-        }
-        // If use check answer5 cube10_radio on question5 add a point
-
-        // Is the button now checked?
-        boolean answer5 = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.cube10_radio:
-                if (answer5)
-                    totalScore = score + 1;
-                // cube
-                break;
-            case R.id.cone10_radio:
-                if (answer5)
-                // cone
-                {
-                    break;
-                }
-            case R.id.sphere10_radio:
-                if (answer5)
-                    // sphere
-                    break;
-        }
-        // If user check answer6 No_id on question6 add a point
-
-        // Is the button now checked?
-        boolean answer6 = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked and add point
-        switch (view.getId()) {
-            case R.id.No_id:
-                if (answer6)
-                    totalScore = score + 1;
-                // No
-                break;
-            case R.id.Yes_id:
-                if (answer6)
-                    // Yes
-                    break;
-        }
-        // Figure out if the user fill out question7 with Cylinder and add point
-        EditText fillIn = (EditText) findViewById(R.id.cylinder_text_input);
-        String text = fillIn.getText().toString();
-        Log.d("test", text);
-        if (text.equals("Cylinder")) {
-            Log.d("test", "right");
-            totalScore = score + 1;
-        }
-        // Figure out if the user fill out question8 with Cube and add point
-        EditText fillIn2 = (EditText) findViewById(R.id.cube_text_input);
-        String text2 = fillIn.getText().toString();
-        Log.d("test", text);
-        if (text.equals("Cube")) {
-            Log.d("test", "right");
-            totalScore = score + 1;
-        }
-
-        return totalScore;
-    }
-}

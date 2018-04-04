@@ -26,8 +26,8 @@
             android:text="@string/Title"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="#3F51B5"
-            android:textSize="24sp"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/textSize"
             android:textStyle="bold" />
 
         <TextView
@@ -61,11 +61,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:hint="@string/Name"
+            android:hint="@string/name"
             android:inputType="textCapWords"/>
 
         <TextView
-            android:id="@+id/three_dimensional_question"
+            android:id="@+id/three_dimensional_question1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -106,13 +106,14 @@
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Three dimesional"
+                android:onClick="submitAnswers"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
         </RadioGroup>
 
         <TextView
-            android:id="@+id/shape_question"
+            android:id="@+id/shape_question2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -140,6 +141,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sphere"
+                android:onClick="submitAnswers"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
@@ -159,7 +161,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/all_spheres_question"
+                android:id="@+id/all_spheres_question3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -173,7 +175,7 @@
                 android:id="@+id/sphere3_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/all_spheres_question"
+                android:layout_below="@id/all_spheres_question3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/sphere3" />
@@ -182,6 +184,7 @@
                 android:id="@+id/sphere3_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
                 android:layout_alignRight="@id/sphere3_view"
                 android:layout_below="@id/sphere3_view" />
 
@@ -189,7 +192,7 @@
                 android:id="@+id/cone9_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/all_spheres_question"
+                android:layout_below="@id/all_spheres_question3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/sphere3_view"
@@ -207,7 +210,7 @@
                 android:id="@+id/sphere6_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/all_spheres_question"
+                android:layout_below="@id/all_spheres_question3"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/cone9_view"
@@ -217,11 +220,12 @@
                 android:id="@+id/sphere6_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
                 android:layout_alignRight="@id/sphere6_view"
                 android:layout_below="@id/sphere6_view" />
 
             <TextView
-                android:id="@+id/shape_cone_question"
+                android:id="@+id/shape_cone_question4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sphere3_box"
@@ -236,7 +240,7 @@
                 android:id="@+id/cone11_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/shape_cone_question"
+                android:layout_below="@id/shape_cone_question4"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/cone11" />
@@ -245,6 +249,7 @@
                 android:id="@+id/cone11_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
                 android:layout_alignRight="@id/cone11_view"
                 android:layout_below="@id/cone11_view" />
 
@@ -252,7 +257,7 @@
                 android:id="@+id/pelota_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/shape_cone_question"
+                android:layout_below="@id/shape_cone_question4"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/cone11_view"
@@ -270,7 +275,7 @@
                 android:id="@+id/conenaranja_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/shape_cone_question"
+                android:layout_below="@id/shape_cone_question4"
                 android:layout_marginLeft="24dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/pelota_view"
@@ -280,12 +285,13 @@
                 android:id="@+id/conenaranja_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
                 android:layout_alignRight="@id/conenaranja_view"
                 android:layout_below="@id/conenaranja_view" />
 
 
             <TextView
-                android:id="@+id/cube_question"
+                android:id="@+id/cube_question5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cone11_box"
@@ -300,7 +306,7 @@
                 android:id="@+id/sphere10_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cube_question"
+                android:layout_below="@id/cube_question5"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/sphere10" />
@@ -316,7 +322,7 @@
                 android:id="@+id/cone10_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cube_question"
+                android:layout_below="@id/cube_question5"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/sphere10_view"
@@ -326,15 +332,17 @@
                 android:id="@+id/cone10_radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
                 android:layout_alignEnd="@id/cone10_view"
                 android:layout_alignRight="@id/cone10_view"
                 android:layout_below="@id/cone10_view" />
 
             <ImageView
                 android:id="@+id/cube10_view"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cube_question"
+                android:layout_below="@id/cube_question5"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_toRightOf="@id/cone10_view"
@@ -348,7 +356,7 @@
                 android:layout_below="@id/cube10_view" />
 
             <TextView
-                android:id="@+id/circle_question"
+                android:id="@+id/circle_question6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sphere10_radio"
@@ -363,7 +371,7 @@
                 android:id="@+id/cube4_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/circle_question"
+                android:layout_below="@id/circle_question6"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
@@ -390,6 +398,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="48dp"
+                            android:onClick="submitAnswers"
                             android:layout_gravity="end"
                             android:text="No" />
 
@@ -455,6 +464,7 @@
                 android:layout_below="@id/cube5_view"
                 android:layout_marginBottom="16dp"
                 android:hint="Fill name"
+                android:onClick="submitAnswers"
                 android:inputType="textCapWords" />
 
             <FrameLayout
@@ -474,7 +484,7 @@
                     android:layout_below="@id/framelayout2"
                     android:layout_marginTop="16dp"
                     android:hint="submit"
-                    android:onClick="displayResults"
+                    android:onClick="submitOnClick"
                     android:text="Submit" />
 
 
@@ -485,13 +495,12 @@
                     android:layout_marginRight="48dp"
                     android:layout_gravity="end"
                     android:layout_below="@id/framelayout2"
+                    android:onClick="reset"
                     android:layout_marginTop="16dp"
                     android:text="Reset" />
 
 
             </FrameLayout>
-
-
 
         </RelativeLayout>
 

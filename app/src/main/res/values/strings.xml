@@ -5,4 +5,7 @@
     <string name="todo">TODO</string>
     <string name="Name">name</string>
     <string name="nameInput">nameInput</string>
+    <string name="total_score">Total Score:</string>
+    <string name="name">name</string>
+    <string name="quiz_summary_name">quiz_summary_name</string>
 </resources>
