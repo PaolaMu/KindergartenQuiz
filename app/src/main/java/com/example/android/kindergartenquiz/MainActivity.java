@@ -1,8 +1,8 @@
 package com.example.android.kindergartenquiz;
 
-import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
@@ -68,19 +68,14 @@ public class MainActivity extends AppCompatActivity {
         if (question1.isChecked()) {
             totalScore++;
         }
-
         if (question2.isChecked()) {
             totalScore++;
         }
-
-        if (question3a.isChecked() && question3b.isChecked() && !question3c.isChecked()){
+        if (question3a.isChecked() && question3b.isChecked() && !question3c.isChecked()) {
             totalScore++;
-
         }
-
         if (question4a.isChecked() && question4b.isChecked() && !question4c.isChecked()) {
             totalScore++;
-
         }
         if (question5.isChecked()) {
             totalScore++;
@@ -95,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             totalScore++;
         }
     }
+
     public void submitOnClick(View view) {
         submitAnswers();
         // get user name
@@ -104,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
         //This next step calls the score interpretation process seen in "scoreToastMessage"
         scoreToastMessage(totalScore);
     }
+
     // At this point, the program retrieves the message associated with the score, and presents it on the screen as a toast.
     public void scoreToastMessage(int totalScore) {
         if (totalScore == 8) {
@@ -143,7 +140,6 @@ public class MainActivity extends AppCompatActivity {
         // This code will restart the quiz/activity
         Intent resetActivity = getIntent();
         finish();
-        startActivity(resetActivity);}
-
-
+        startActivity(resetActivity);
+    }
 }
