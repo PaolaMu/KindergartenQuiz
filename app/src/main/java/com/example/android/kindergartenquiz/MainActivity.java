@@ -12,24 +12,17 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 
-
 public class MainActivity extends AppCompatActivity {
     //Initialized
     int totalScore = 0;
-    int question1Score = 0;
-    int question2Score = 0;
-    int question3Score = 0;
-    int question4Score = 0;
-    int question5Score = 0;
-    int question6Score = 0;
-    int question7Score = 0;
-    int question8Score = 0;
     RadioButton question1;
     RadioButton question2;
     CheckBox question3a;
     CheckBox question3b;
+    CheckBox question3c;
     CheckBox question4a;
     CheckBox question4b;
+    CheckBox question4c;
     RadioButton question5;
     RadioButton question6;
     EditText question7;
@@ -40,23 +33,19 @@ public class MainActivity extends AppCompatActivity {
     Editable userName;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    /**
-     * This method is called when the user click the Submit button.
-     */
-    public void submitAnswers(View view) {
         question1 = findViewById(R.id.three_dimensional);
         question2 = findViewById(R.id.sphere);
         question3a = findViewById(R.id.sphere3_box);
         question3b = findViewById(R.id.sphere6_box);
+        question3c = findViewById(R.id.cone9_box);
         question4a = findViewById(R.id.cone11_box);
         question4b = findViewById(R.id.conenaranja_box);
+        question4c = findViewById(R.id.pelota_box);
         question5 = findViewById(R.id.cube10_radio);
         question6 = findViewById(R.id.No_id);
         question7 = findViewById(R.id.cylinder);
@@ -64,71 +53,58 @@ public class MainActivity extends AppCompatActivity {
         submitAnswers = findViewById(R.id.submit_id);
         reset = findViewById(R.id.reset_id);
         nameInput = findViewById(R.id.name_text_input);
+    }
+
+    /**
+     * This method is called when the user click the Submit button.
+     */
+    public void submitAnswers() {
+        totalScore = 0;
 
         /*
          * Checks if answer are correct and gives one point per correct answer
          */
 
         if (question1.isChecked()) {
-            if (question1Score == 0) {
-                question1Score++;
-
-            }
+            totalScore++;
         }
 
         if (question2.isChecked()) {
-            if (question2Score == 0) {
-                question2Score++;
-            }
+            totalScore++;
         }
 
-        if (question3a.isChecked() && question3b.isChecked()) {
-            if (question3Score == 0) {
-                question3Score++;
-            }
+        if (question3a.isChecked() && question3b.isChecked() && !question3c.isChecked()){
+            totalScore++;
 
         }
 
-        if (question4a.isChecked() && question4b.isChecked()) {
-            if (question4Score == 0) {
-                question4Score++;
-            }
+        if (question4a.isChecked() && question4b.isChecked() && !question4c.isChecked()) {
+            totalScore++;
 
         }
         if (question5.isChecked()) {
-            if (question5Score == 0) {
-                question5Score++;
-            }
+            totalScore++;
         }
         if (question6.isChecked()) {
-            if (question6Score == 0) {
-                question6Score++;
-            }
+            totalScore++;
         }
-        if (question7.getText().toString().trim().equals("Cylinder")) {
-            if (question7Score == 0) {
-                question7Score++;
-            }
+        if (question7.getText().toString().trim().toLowerCase().equals("cylinder")) {
+            totalScore++;
         }
-        if (question8.getText().toString().trim().equals("Cube")) {
-            if (question8Score == 0) {
-                question8Score++;
-            }
+        if (question8.getText().toString().trim().toLowerCase().equals("cube")) {
+            totalScore++;
         }
     }
-        public void submitOnClick(View view) {
-            // get user name
-            nameInput = (findViewById(R.id.name_text_input));
-            userName = nameInput.getText();
+    public void submitOnClick(View view) {
+        submitAnswers();
+        // get user name
+        nameInput = (findViewById(R.id.name_text_input));
+        userName = nameInput.getText();
 
-            // Calculate the score
-            totalScore = question1Score + question2Score + question3Score + question4Score +
-                    question5Score + question6Score + question7Score + question8Score;
-
-            //This next step calls the score interpretation process seen in "scoreToastMessage"
-            scoreToastMessage(totalScore);
-        }
-// At this point, the program retrieves the message associated with the score, and presents it on the screen as a toast.
+        //This next step calls the score interpretation process seen in "scoreToastMessage"
+        scoreToastMessage(totalScore);
+    }
+    // At this point, the program retrieves the message associated with the score, and presents it on the screen as a toast.
     public void scoreToastMessage(int totalScore) {
         if (totalScore == 8) {
             String scoreMessage8 = userName + " You scored " + totalScore + " out of 8! " + "Amazing job!";
@@ -170,5 +146,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(resetActivity);}
 
 
- }
-
+}

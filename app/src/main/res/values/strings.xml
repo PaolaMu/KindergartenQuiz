@@ -3,9 +3,26 @@
     <string name="Title">Kindergarten Math</string>
     <string name="subtitle">Three dimensional shapes</string>
     <string name="todo">TODO</string>
-    <string name="Name">name</string>
+    <string name="Name">Name</string>
     <string name="nameInput">nameInput</string>
     <string name="total_score">Total Score:</string>
     <string name="name">name</string>
     <string name="quiz_summary_name">quiz_summary_name</string>
+    <string name="let_s_play_and_learn">Let\'s play and learn!</string>
+    <string name="three_dimensional_question">Is this shape two dimensional or three dimensional?</string>
+    <string name="two_dimensional">Two dimensional</string>
+    <string name="three_dimensional">Three dimensional</string>
+    <string name="sphere">Sphere</string>
+    <string name="cube">Cube</string>
+    <string name="select_all_the_spheres">Select all the spheres.</string>
+    <string name="which_items_are_shape_like_a_cone">Which items are shape like a cone?</string>
+    <string name="which_shape_is_a_cube">Which Shape is a cube?</string>
+    <string name="can_you_trace_a_circle_with_this_shape">Can you trace a circle with this shape?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="what_shape_is_this">What shape is this?</string>
+    <string name="fill_name">Fill name</string>
+    <string name="submit">submit</string>
+    <string name="submit1">Submit</string>
+    <string name="reset">Reset</string>
 </resources>
