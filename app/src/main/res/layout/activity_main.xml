@@ -36,8 +36,8 @@
             android:text="@string/subtitle"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="#3F51B5"
-            android:textSize="24sp"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/textSize"
             android:textStyle="bold" />
 
         <ImageView
