@@ -14,23 +14,23 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //Initialized
-    int totalScore = 0;
-    RadioButton question1;
-    RadioButton question2;
-    CheckBox question3a;
-    CheckBox question3b;
-    CheckBox question3c;
-    CheckBox question4a;
-    CheckBox question4b;
-    CheckBox question4c;
-    RadioButton question5;
-    RadioButton question6;
-    EditText question7;
-    EditText question8;
-    EditText nameInput;
-    Button reset;
-    Button submitAnswers;
-    Editable userName;
+    private int totalScore = 0;
+    private   RadioButton question1;
+    private RadioButton question2;
+    private CheckBox question3a;
+    private CheckBox question3b;
+    private CheckBox question3c;
+    private CheckBox question4a;
+    private CheckBox question4b;
+    private CheckBox question4c;
+    private RadioButton question5;
+    private RadioButton question6;
+    private EditText question7;
+    private EditText question8;
+    private EditText nameInput;
+    public Button reset;
+    public Button submitAnswers;
+    private Editable userName;
 
 
     @Override
