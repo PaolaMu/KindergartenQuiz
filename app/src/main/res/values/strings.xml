@@ -25,4 +25,21 @@
     <string name="submit">submit</string>
     <string name="submit1">Submit</string>
     <string name="reset">Reset</string>
+    <string name="text8" formatted="false"> %1$s! You Scored %2$d out of 8. Amazing job!.</string>
+    <string name="text7" formatted="false"> %1$s! You Scored %2$d out of 8. Great job!.</string>
+    <string name="text6" formatted="false"> %1$s! You Scored %2$d out of 8. Good job!.</string>
+    <string name="text5" formatted="false"> %1$s! You Scored %2$d out of 8. Pretty Good!.</string>
+    <string name="text4" formatted="false"> %1$s! You Scored %2$d out of 8. You can do better!.</string>
+    <string name="text3" formatted="false"> %1$s! You Scored %2$d out of 8. Keep studying!.</string>
+    <string name="text2" formatted="false"> %1$s! You Scored %2$d out of 8. Try again!.</string>
+    <string name="text1" formatted="false"> %1$s! You Scored %2$d out of 8. You should practice!.</string>
+    <string name="text0" formatted="false"> %1$s! You Scored %2$d out of 8. Review your Three dimensional shapes theme!.</string>
+    <string name="sphere1">sphere1</string>
+    <string name="sphere2">sphere2</string>
+    <string name="cone1">cone1</string>
+    <string name="cones">cones</string>
+    <string name="ball">ball</string>
+    <string name="orange_cone">orange cone</string>
+    <string name="cylinder">cylinder</string>
+    <string name="shapes">shapes</string>
 </resources>

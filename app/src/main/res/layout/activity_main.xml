@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/shapesfinal1"
-            tools:ignore="ContentDescription" />
+            android:contentDescription="@string/shapes" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,8 +59,8 @@
             android:id="@+id/name_text_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_bottom"
-            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginBottom="@dimen/margin_bottom_16"
+            android:layout_marginTop="@dimen/margin_top_16"
             android:hint="@string/name"
             android:inputType="textCapWords" />
 
@@ -68,14 +68,14 @@
             android:id="@+id/three_dimensional_question1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginTop="@dimen/margin_top_16"
             android:background="@color/colorPrimary"
             android:paddingEnd="@dimen/padding_left_8"
             android:paddingLeft="@dimen/padding_left_8"
             android:paddingRight="@dimen/padding_Right_8"
             android:paddingStart="@dimen/padding_left_8"
             android:text="@string/three_dimensional_question"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_18"
             android:textStyle="bold" />
 
@@ -86,7 +86,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingTop="@dimen/activity_main_paddingTop"
             android:src="@drawable/cube2"
-            tools:ignore="contentDescription" />
+            android:contentDescription="@string/cube" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                 android:id="@+id/two_dimensional"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:text="@string/two_dimensional"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_16" />
@@ -109,8 +109,8 @@
                 android:id="@+id/three_dimensional"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_bottom"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginBottom="@dimen/margin_bottom_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:text="@string/three_dimensional"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_16" />
@@ -121,14 +121,14 @@
             android:id="@+id/shape_question2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_top"
+            android:layout_marginTop="@dimen/margin_top_16"
             android:background="@color/colorPrimary"
             android:paddingEnd="@dimen/padding_left_8"
             android:paddingLeft="@dimen/padding_left_8"
             android:paddingRight="@dimen/padding_Right_8"
             android:paddingStart="@dimen/padding_left_8"
             android:text="@string/what_shape_is_this"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/text_18"
             android:textStyle="bold" />
 
@@ -138,7 +138,7 @@
             android:layout_gravity="center_horizontal"
             android:paddingTop="@dimen/activity_main_paddingTop"
             android:src="@drawable/sphere_small"
-            tools:ignore="contentDescription" />
+            android:contentDescription="@string/sphere"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -160,7 +160,7 @@
                 android:id="@+id/cube"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:text="@string/cube"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/text_16" />
@@ -175,14 +175,14 @@
                 android:id="@+id/all_spheres_question3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:background="@color/colorPrimary"
                 android:paddingEnd="@dimen/padding_left_8"
                 android:paddingLeft="@dimen/padding_left_8"
                 android:paddingRight="@dimen/padding_Right_8"
                 android:paddingStart="@dimen/padding_left_8"
                 android:text="@string/select_all_the_spheres"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
@@ -191,11 +191,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/all_spheres_question3"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:src="@drawable/sphere3"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/sphere1" />
 
             <CheckBox
                 android:id="@+id/sphere3_box"
@@ -210,13 +210,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/all_spheres_question3"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:layout_toEndOf="@id/sphere3_view"
                 android:layout_toRightOf="@id/sphere3_view"
                 android:src="@drawable/cone9"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/cone1" />
 
             <CheckBox
                 android:id="@+id/cone9_box"
@@ -231,13 +231,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/all_spheres_question3"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:layout_toEndOf="@id/cone9_view"
                 android:layout_toRightOf="@id/cone9_view"
                 android:src="@drawable/sphere6"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/sphere2" />
 
             <CheckBox
                 android:id="@+id/sphere6_box"
@@ -252,14 +252,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sphere3_box"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:background="@color/colorPrimary"
                 android:paddingEnd="@dimen/padding_left_8"
                 android:paddingLeft="@dimen/padding_left_8"
                 android:paddingRight="@dimen/padding_Right_8"
                 android:paddingStart="@dimen/padding_left_8"
                 android:text="@string/which_items_are_shape_like_a_cone"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
@@ -268,11 +268,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/shape_cone_question4"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:src="@drawable/cone11"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/cones" />
 
             <CheckBox
                 android:id="@+id/cone11_box"
@@ -283,46 +283,46 @@
                 android:layout_below="@id/cone11_view" />
 
             <ImageView
-                android:id="@+id/pelota_view"
+                android:id="@+id/ball_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/shape_cone_question4"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:layout_toEndOf="@id/cone11_view"
                 android:layout_toRightOf="@id/cone11_view"
-                android:src="@drawable/pelota"
-                tools:ignore="contentDescription" />
+                android:src="@drawable/ball"
+                android:contentDescription="@string/ball" />
 
             <CheckBox
-                android:id="@+id/pelota_box"
+                android:id="@+id/ball_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@id/pelota_view"
-                android:layout_alignRight="@id/pelota_view"
-                android:layout_below="@id/pelota_view" />
+                android:layout_alignEnd="@id/ball_view"
+                android:layout_alignRight="@id/ball_view"
+                android:layout_below="@id/ball_view" />
 
             <ImageView
-                android:id="@+id/conenaranja_view"
+                android:id="@+id/orange_cone_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/shape_cone_question4"
                 android:layout_marginLeft="@dimen/margin_left_24"
                 android:layout_marginStart="@dimen/margin_left_24"
-                android:layout_marginTop="@dimen/margin_top"
-                android:layout_toEndOf="@id/pelota_view"
-                android:layout_toRightOf="@id/pelota_view"
-                android:src="@drawable/conenaranja"
-                tools:ignore="contentDescription" />
+                android:layout_marginTop="@dimen/margin_top_16"
+                android:layout_toEndOf="@id/ball_view"
+                android:layout_toRightOf="@id/ball_view"
+                android:src="@drawable/orange_cone"
+                android:contentDescription="@string/orange_cone"/>
 
             <CheckBox
-                android:id="@+id/conenaranja_box"
+                android:id="@+id/orange_cone_box"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@id/conenaranja_view"
-                android:layout_alignRight="@id/conenaranja_view"
-                android:layout_below="@id/conenaranja_view" />
+                android:layout_alignEnd="@id/orange_cone_view"
+                android:layout_alignRight="@id/orange_cone_view"
+                android:layout_below="@id/orange_cone_view" />
 
 
             <TextView
@@ -330,14 +330,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cone11_box"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:background="@color/colorPrimary"
                 android:paddingEnd="@dimen/padding_left_8"
                 android:paddingLeft="@dimen/padding_left_8"
                 android:paddingRight="@dimen/padding_Right_8"
                 android:paddingStart="@dimen/padding_left_8"
                 android:text="@string/which_shape_is_a_cube"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
@@ -352,21 +352,21 @@
                     android:id="@+id/sphere10_radio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top_16"
                     android:drawableTop="@drawable/sphere10" />
 
                 <RadioButton
                     android:id="@+id/cone10_radio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top_16"
                     android:drawableTop="@drawable/cone10" />
 
                 <RadioButton
                     android:id="@+id/cube10_radio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top_16"
                     android:drawableTop="@drawable/cube10"
                     android:paddingEnd="@dimen/padding_left_8"
                     android:paddingLeft="@dimen/padding_left_8"
@@ -380,14 +380,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/radio_group2"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:background="@color/colorPrimary"
                 android:paddingEnd="@dimen/padding_left_8"
                 android:paddingLeft="@dimen/padding_left_8"
                 android:paddingRight="@dimen/padding_Right_8"
                 android:paddingStart="@dimen/padding_left_8"
                 android:text="@string/can_you_trace_a_circle_with_this_shape"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
@@ -398,11 +398,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/circle_question6"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:src="@drawable/cube4"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/cube"/>
 
             <RadioGroup
                 android:id="@+id/radio_group3"
@@ -427,7 +427,7 @@
                     android:id="@+id/No_id"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top_16"
                     android:text="@string/no"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/text_16" />
@@ -439,14 +439,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/radio_group3"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:background="@color/colorPrimary"
                 android:paddingEnd="@dimen/padding_left_8"
                 android:paddingLeft="@dimen/padding_left_8"
                 android:paddingRight="@dimen/padding_Right_8"
                 android:paddingStart="@dimen/padding_left_8"
                 android:text="@string/what_shape_is_this"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
@@ -456,35 +456,34 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cylinder_question"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:src="@drawable/cylinder1"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/cylinder" />
 
             <EditText
                 android:id="@+id/cylinder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cylinder1_view"
-                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_marginBottom="@dimen/margin_bottom_16"
                 android:hint="@string/fill_name"
                 android:inputType="textCapWords" />
-
 
             <TextView
                 android:id="@+id/cube5_question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cylinder"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:background="@color/colorPrimary"
                 android:paddingEnd="@dimen/padding_left_8"
                 android:paddingLeft="@dimen/padding_left_8"
                 android:paddingRight="@dimen/padding_Right_8"
                 android:paddingStart="@dimen/padding_left_8"
                 android:text="@string/what_shape_is_this"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
@@ -494,23 +493,23 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cube5_question"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="@dimen/margin_left"
-                android:layout_marginStart="@dimen/margin_left"
-                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginLeft="@dimen/margin_left_16"
+                android:layout_marginStart="@dimen/margin_left_16"
+                android:layout_marginTop="@dimen/margin_top_16"
                 android:src="@drawable/cube5"
-                tools:ignore="contentDescription" />
+                android:contentDescription="@string/cube" />
 
             <EditText
                 android:id="@+id/cube_text_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cube5_view"
-                android:layout_marginBottom="@dimen/margin_bottom"
+                android:layout_marginBottom="@dimen/margin_bottom_16"
                 android:hint="@string/fill_name"
                 android:inputType="textCapWords" />
 
             <FrameLayout
-                android:id="@+id/framelayout2"
+                android:id="@+id/frame_layout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/cube_text_input"
@@ -524,7 +523,7 @@
                     android:layout_gravity="start"
                     android:layout_marginLeft="@dimen/margin_left_48"
                     android:layout_marginStart="@dimen/margin_left_48"
-                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top_16"
                     android:hint="@string/submit"
                     android:onClick="submitOnClick"
                     android:text="@string/submit1" />
@@ -537,7 +536,7 @@
                     android:layout_gravity="end"
                     android:layout_marginEnd="@dimen/margin_right_48"
                     android:layout_marginRight="@dimen/margin_right_48"
-                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginTop="@dimen/margin_top_16"
                     android:onClick="reset"
                     android:text="@string/reset" />
 

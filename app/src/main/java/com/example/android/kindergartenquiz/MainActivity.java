@@ -1,6 +1,7 @@
 package com.example.android.kindergartenquiz;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     //Initialized
     private int totalScore = 0;
-    private   RadioButton question1;
+    private RadioButton question1;
     private RadioButton question2;
     private CheckBox question3a;
     private CheckBox question3b;
@@ -44,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         question3b = findViewById(R.id.sphere6_box);
         question3c = findViewById(R.id.cone9_box);
         question4a = findViewById(R.id.cone11_box);
-        question4b = findViewById(R.id.conenaranja_box);
-        question4c = findViewById(R.id.pelota_box);
+        question4b = findViewById(R.id.orange_cone_box);
+        question4c = findViewById(R.id.ball_box);
         question5 = findViewById(R.id.cube10_radio);
         question6 = findViewById(R.id.No_id);
         question7 = findViewById(R.id.cylinder);
@@ -104,32 +105,33 @@ public class MainActivity extends AppCompatActivity {
     // At this point, the program retrieves the message associated with the score, and presents it on the screen as a toast.
     public void scoreToastMessage(int totalScore) {
         if (totalScore == 8) {
-            String scoreMessage8 = userName + " You scored " + totalScore + " out of 8! " + "Amazing job!";
+            Resources res = getResources(); String scoreMessage8 = res.getString(R.string.text8, userName, totalScore);
             Toast.makeText(this, scoreMessage8, Toast.LENGTH_LONG).show();
         } else if (totalScore == 7) {
-            String scoreMessage7 = userName + " You scored " + totalScore + " out of 8! " + "Great job!";
+            Resources res = getResources(); String scoreMessage7 = res.getString(R.string.text7, userName, totalScore);
             Toast.makeText(this, scoreMessage7, Toast.LENGTH_LONG).show();
         } else if (totalScore == 6) {
-            String scoreMessage6 = userName + " You scored " + totalScore + " out of 8! " + "Good job!";
+            Resources res = getResources(); String scoreMessage6 = res.getString(R.string.text6, userName, totalScore);
             Toast.makeText(this, scoreMessage6, Toast.LENGTH_LONG).show();
         } else if (totalScore == 5) {
-            String scoreMessage5 = userName + " You scored " + totalScore + " out of 8! " + "Pretty good!";
+            Resources res = getResources(); String scoreMessage5 = res.getString(R.string.text5, userName, totalScore);
             Toast.makeText(this, scoreMessage5, Toast.LENGTH_LONG).show();
         } else if (totalScore == 4) {
-            String scoreMessage4 = userName + " You scored " + totalScore + " out of 8! " + "You can do better!";
+            Resources res = getResources(); String scoreMessage4 = res.getString(R.string.text4, userName, totalScore);
             Toast.makeText(this, scoreMessage4, Toast.LENGTH_LONG).show();
         } else if (totalScore == 3) {
-            String scoreMessage3 = userName + " You scored " + totalScore + " out of 8! " + "Keep studying!";
+            Resources res = getResources(); String scoreMessage3 = res.getString(R.string.text3, userName, totalScore);
             Toast.makeText(this, scoreMessage3, Toast.LENGTH_LONG).show();
         } else if (totalScore == 2) {
-            String scoreMessage2 = userName + " You scored " + totalScore + " out of 8! " + "Tray again!";
+            Resources res = getResources(); String scoreMessage2 = res.getString(R.string.text2, userName, totalScore);
             Toast.makeText(this, scoreMessage2, Toast.LENGTH_LONG).show();
         } else if (totalScore == 1) {
-            String scoreMessage1 = userName + " You scored " + totalScore + " out of 8! " + "You need practice!";
+            Resources res = getResources(); String scoreMessage1 = res.getString(R.string.text1, userName, totalScore);
             Toast.makeText(this, scoreMessage1, Toast.LENGTH_LONG).show();
         } else {
-            String scoreMessage0 = userName + " You scored " + totalScore + " out of 8! " + "Review your Three dimensional shapes theme!";
+            Resources res = getResources(); String scoreMessage0 = res.getString(R.string.text0, userName, totalScore);
             Toast.makeText(this, scoreMessage0, Toast.LENGTH_LONG).show();
+
         }
     }
 

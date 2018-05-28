@@ -5,13 +5,11 @@
 <dimen name="activity_main_paddingLeft">16dp</dimen>
 <dimen name="activity_main_paddingTop">16dp</dimen>
 <dimen name="textSize">24sp</dimen>
-<dimen name="margin_top">16dp</dimen>
-<dimen name="margin_bottom">16dp</dimen>
-<dimen name="radio_padding_left">8dp</dimen>
-<dimen name="radio_padding_right">8dp</dimen>
+<dimen name="margin_top_16">16dp</dimen>
+<dimen name="margin_bottom_16">16dp</dimen>
     <dimen name="text_16">16sp</dimen>
     <dimen name="text_18">18sp</dimen>
-    <dimen name="margin_left">16dp</dimen>
+    <dimen name="margin_left_16">16dp</dimen>
     <dimen name="margin_left_24">24dp</dimen>
     <dimen name="margin_left_48">48dp</dimen>
     <dimen name="margin_right_48">48dp</dimen>

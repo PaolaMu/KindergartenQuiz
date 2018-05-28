@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Preescolar test</string>
+    <string name="Title">Matemática de Preescolar</string>
+    <string name="subtitle">Figuras Tridimensionales</string>
+    <string name="todo">TODO</string>
+    <string name="Name">Nombre</string>
+    <string name="nameInput">Entrar</string>
+    <string name="total_score">Puntaje Total:</string>
+    <string name="name">nombre</string>
+    <string name="quiz_summary_name">nombre_sumario_test</string>
+    <string name="let_s_play_and_learn">Vamos a jugar y aprender!</string>
+    <string name="three_dimensional_question">Esta figura es bidimensional o tridimensional?</string>
+    <string name="two_dimensional">Bidimensional</string>
+    <string name="three_dimensional">Tridimensional</string>
+    <string name="sphere">Esfera</string>
+    <string name="cube">Cubo</string>
+    <string name="select_all_the_spheres">Seleccione todas las esferas.</string>
+    <string name="which_items_are_shape_like_a_cone">Cuáles objetos tienen figura de cono?</string>
+    <string name="which_shape_is_a_cube">Cuál figura es un cubo?</string>
+    <string name="can_you_trace_a_circle_with_this_shape">Puedes trazar un circulo con esta figura?</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="what_shape_is_this">Qué figura es esta?</string>
+    <string name="fill_name">Coloque el nombre </string>
+    <string name="submit">enviar</string>
+    <string name="submit1">Enviar</string>
+    <string name="reset">Reiniciar</string>
+    <string name="text8" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Excelente!.</string>
+    <string name="text7" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Muy bien!.</string>
+    <string name="text6" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Continua así!.</string>
+    <string name="text5" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Bien!.</string>
+    <string name="text4" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Puedes Mejorar!.</string>
+    <string name="text3" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Continua estudiando!.</string>
+    <string name="text2" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Intentalo de nuevo!.</string>
+    <string name="text1" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Deberias practicar!.</string>
+    <string name="text0" formatted="false"> %1$s! Tu puntuación es %2$d de 8. Repasa tu tema de figuras tridimensionales!.</string>
+
+</resources>
